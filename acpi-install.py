@@ -13,12 +13,12 @@ import urllib2
 
 def check_connectivity():
 	"""This function checks the connectivity to internet"""
-    try:
-        urllib2.urlopen('http://www.google.com',timeout=2)
-        return True
-    except urllib.request.URLError:
-    	print("No internet connection available. Please get one to move further")
-        return False
+	try:
+		urllib2.urlopen('http://www.google.com',timeout=2)
+		return True
+	except urllib.request.URLError:
+		print("No internet connection available. Please get one to move further")
+		return False
         
 def install_acpi():
 	"""We find the distribuion of the system and then run command to install 
@@ -37,11 +37,13 @@ def install_acpi():
 		
 		# linux
 		elif _platform == "darwin":
+			pass
 			#here we need a command to install acpi on darwin
-		# OS X
+			# OS X
 		elif _platform == "win32":
 			#here we need a command to install acpi on window's DOS	
-		
+			pass
+			
 		print "Ahaa..!! acpi module installed"
 	
 install_acpi();
