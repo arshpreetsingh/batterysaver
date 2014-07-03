@@ -15,6 +15,7 @@ def limitcheck():
 	
 	match1=re.search(r'Charging',c); #ethe fer patteren matching vich galti aa rhi aaa oh discharging nu vi charging samaj riha haii.
 	match2=re.search(r'Discharcharging',c);		
+
 	if(b>=80):
 		if match1:
 			print "remove ac";
@@ -32,6 +33,15 @@ def limitcheck():
 			webbrowser.open('http://arshpreetsingh.wordpress.com/');
 			time.sleep(200);
 			limitcheck();
+	
+	
+	elif:
+	
+		if not c:
+			print "Your battery is completly dead";
+	
+	
+	
 	else:
 		print "you are running safe";
 		time.sleep(900);
