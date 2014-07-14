@@ -31,11 +31,13 @@ def install_acpi():
 	except ImportError:
 		if _platform == "linux" or _platform == "linux2":
 			if linux_distro=='Ubuntu':
-				os.system("sudo apt-get install acpi")
+				os.system("sudo apt-get install acpi -y")
+				os.system("sudo apt-get install python-pip -y")
+				os.system("sudo pip install acpi")
 			elif linux_distro=='RedHat':
-				os.system("sudo yum install acpi")
-		
-		# linux
+				os.system("sudo yum -y install acpi")
+				os.system("sudo yum -y install python-pip")
+	# linux
 		elif _platform == "darwin":
 			pass
 			#here we need a command to install acpi on darwin
@@ -44,7 +46,8 @@ def install_acpi():
 			#here we need a command to install acpi on window's DOS	
 			pass
 			
-		print "Ahaa..!! acpi module installed"
+		print "Ahaa..!! acpi application+module are installed successfully"
+
 	
 install_acpi();
     
