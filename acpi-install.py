@@ -1,7 +1,7 @@
 """
 %%% acpi-install.py %%%
 This file is used to check whether the system has acpi package or not. If it 
-does not fine the package, it is installed.
+does not find the package, it will install.
 """
 
 ########################## Header Files ########################################
@@ -37,7 +37,7 @@ def install_acpi():
 			elif linux_distro=='RedHat':
 				os.system("sudo yum -y install acpi")
 				os.system("sudo yum -y install python-pip")
-		
+				os.system("sudo pip install acpi")
 		# linux
 		elif _platform == "darwin":
 			pass
